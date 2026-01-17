@@ -29,15 +29,17 @@ function renderAnime(list, elementId) {
   container.innerHTML = "";
 
   list.forEach(anime => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <img src="${anime.image}">
-      <h4>${anime.title}</h4>
-    `;
+   card.innerHTML = `
+  <a href="anime.html" style="text-decoration:none;color:white">
+    <img src="${anime.image}">
+    <h4>${anime.title}</h4>
+  </a>
+`;
+
     container.appendChild(card);
   });
 }
 
 renderAnime(trendingAnime, "trending");
 renderAnime(latestAnime, "latest");
+
