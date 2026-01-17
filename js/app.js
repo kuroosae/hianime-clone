@@ -1,1 +1,43 @@
-console.log("YeahAnime ready");
+const trendingAnime = [
+  {
+    title: "Attack on Titan",
+    image: "https://via.placeholder.com/200x300?text=AOT"
+  },
+  {
+    title: "One Piece",
+    image: "https://via.placeholder.com/200x300?text=One+Piece"
+  },
+  {
+    title: "Jujutsu Kaisen",
+    image: "https://via.placeholder.com/200x300?text=JJK"
+  }
+];
+
+const latestAnime = [
+  {
+    title: "Demon Slayer Ep 1",
+    image: "https://via.placeholder.com/200x300?text=Demon+Slayer"
+  },
+  {
+    title: "Chainsaw Man Ep 1",
+    image: "https://via.placeholder.com/200x300?text=Chainsaw+Man"
+  }
+];
+
+function renderAnime(list, elementId) {
+  const container = document.getElementById(elementId);
+  container.innerHTML = "";
+
+  list.forEach(anime => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${anime.image}">
+      <h4>${anime.title}</h4>
+    `;
+    container.appendChild(card);
+  });
+}
+
+renderAnime(trendingAnime, "trending");
+renderAnime(latestAnime, "latest");
