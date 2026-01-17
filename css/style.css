@@ -65,3 +65,49 @@ input {
   font-size: .9rem;
   margin: 0;
 }
+
+/* DETAIL PAGE */
+.detail {
+  padding: 1rem;
+}
+
+.detail-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.detail-header img {
+  border-radius: 8px;
+}
+
+.detail-info h2 {
+  margin-top: 0;
+}
+
+.genres span {
+  background: #ff4d4d;
+  padding: .3rem .6rem;
+  border-radius: 5px;
+  margin-right: .4rem;
+  font-size: .8rem;
+}
+
+/* EPISODES */
+.episodes {
+  margin-top: 2rem;
+}
+
+.episode-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.episode-list a {
+  background: #1a1a1a;
+  padding: .6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+}
+
